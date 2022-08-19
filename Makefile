@@ -1,20 +1,20 @@
-PY_ENV = venv
-PY_BIN = $(PY_ENV)/bin
+VENV = venv
+VBIN = $(VENV)/bin
 
 all: build
 
 
-$(PY_BIN)/python:
-	python -m venv $(PY_ENV)
-	chmod +x $(PY_BIN)/activate
-	./$(PY_BIN)/activate
+$(VBIN)/python:
+	python -m venv $(VENV)
+	chmod +x $(VBIN)/activate
+	./$(VBIN)/activate
 
 
-$(PY_BIN)/html2image: $(PY_BIN)/python
-	$(PY_BIN)/pip3 install html2image
+$(VBIN)/html2image: $(VBIN)/python
+	$(VBIN)/pip3 install html2image
 
 
-build: $(PY_BIN)/html2image
+build: $(VBIN)/html2image
 	$(VBIN)/python build.py
 
 clean:
@@ -24,7 +24,7 @@ clean:
 
 
 fclean: clean
-	rm -rf $(PY_ENV)
+	rm -rf $(VENV)
 
 
 .PHONY: build clean fclean
