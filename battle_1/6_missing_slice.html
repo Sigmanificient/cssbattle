@@ -1,0 +1,41 @@
+<div id='circle'>
+  <div class='corner'></div>
+  <div class='corner'></div>
+  <div class='corner'></div>
+</div>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background: #E3516E;
+  }
+
+  #circle {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 17px
+  }
+
+  .corner {
+    width: 100px;
+    height: 100px;
+  }
+
+  .corner:nth-child(1) {
+    border-radius: 100% 0 0;
+    background: #51B5A9;
+  }
+
+  .corner:nth-child(2) {
+    border-radius: 0 100% 0 0;
+    background: #FADE8B;
+  }
+
+  .corner:nth-child(3) {
+    border-radius: 0 0 0 100%;
+    background: #F7F3D7;
+  }
+</style>
