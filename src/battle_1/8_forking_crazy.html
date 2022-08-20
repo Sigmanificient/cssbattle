@@ -1,0 +1,67 @@
+<div class="fork">
+  <div id="handle"></div>
+  <div id="middle"></div>
+  <div id="pics">
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+    <div class="pic"></div>
+  </div>
+</div>
+<style>
+  body, .fork {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: #6592CF;
+  }
+
+  .fork {
+    width: 140px;
+    height: 258px;
+  }
+
+  #handle {
+    height: 65px;
+    width: 20px;
+    background: #060F55;
+  }
+
+  #middle {
+    height: 106px;
+    width: 100%;
+    background: #060F55;
+    border-radius: 0 0 100px 100px;
+    position: relative;
+    bottom: -1px;
+  }
+
+  #pics {
+    display: flex;
+    height: 112px;
+    width: 100%;
+  }
+
+  .pic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: -1px;
+  }
+
+  .pic:nth-child(2n) {
+    border-radius: 0 0 10px 10px;
+    background: #6592CF;
+    bottom: -7px;
+  }
+
+  .pic:nth-child(2n+1) {
+    border-radius: 10px 10px 0 0;
+    background: #060F55;
+  }
+</style>
