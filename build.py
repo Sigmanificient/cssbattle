@@ -34,7 +34,7 @@ def get_title(png):
 
 
 def main():
-    png_paths = get_png_output_path(retrieve_battles())
+    png_paths = sorted(get_png_output_path(retrieve_battles()), reverse=True)
 
     with open('index.html', 'w') as f, open('template/_template.html', 'r') as t:
         f.write(t.read().replace('{{ content }}', '\n\t\t'.join(
