@@ -1,0 +1,39 @@
+<div class="tube"></div>
+<div id="up" class="tube"></div>
+<div class="tube"></div>
+<style>
+  body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: #62306D;
+    height: 100vh;
+  }
+
+  .tube {
+    position: relative;
+    background: #F7EC7D;
+    height: 100px;
+    width: 100px;
+  }
+
+  .tube::after {
+    content: '';
+    height: 100px;
+    width: 100px;
+    top: -58px;
+    border-radius: 50%;
+    border: 20px solid #AA445F;
+    box-sizing: border-box;
+    position: absolute;
+    background: #E38F66;
+  }
+
+  #up {
+    height: 200px;
+  }
+  #up::after {
+    background: #AA445F;
+    border: 20px solid #E38F66;
+  }
+</style>
